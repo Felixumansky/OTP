@@ -16,6 +16,7 @@ import { sqlQueryExecute } from "../../db/execute.db.js";
 import { sendEmail } from "../email.services/emailJet.js";
 export async function OtpCode(email) {
 	try {
+		console.log("otp service OtpCode started with email: " + email);
 		let query = getUserQuery(email.toUpperCase());
 		let user = await sqlQueryExecute(query);
 		let otpCode = "";
