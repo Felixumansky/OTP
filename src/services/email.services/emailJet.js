@@ -1,6 +1,6 @@
 import Mailjet from "node-mailjet";
 
-export default async function sendEmail(email, otpCode) {
+export async function sendEmail(email, otpCode) {
 	const mailjet = Mailjet.apiConnect(
 		process.env.MJ_APIKEY_PUBLIC,
 		process.env.MJ_APIKEY_PRIVATE,

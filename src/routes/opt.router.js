@@ -1,13 +1,6 @@
 import express from "express";
-import sendEmail from "../services/email.services/emailJet.js";
-import { getWeather } from "../services/weather.services/weather.service.js";
-import { sqlQuery } from "../db/query.db.js";
+import * as otpControler from "../controllers/otp.controler.js";
+
 const otpRouter = express.Router();
-otpRouter.get("/otp", async function (req, res) {
-	//console.log("req.body", req.body);
-	//sendEmail(req.body.email, "TODO");
-	//await sqlQuery("");
-	await getWeather();
-	res.send("hello form otp");
-});
+otpRouter.get("/otp", otpControler.getOtpCode);
 export default otpRouter;

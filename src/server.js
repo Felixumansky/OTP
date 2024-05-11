@@ -12,10 +12,6 @@ app.all(
 	} // security measure atm
 );
 
-app.get("/", function (req, res) {
-	res.send("Hello World");
-});
-
 app.use("/api", otpRouter);
 
 // // 	console.log("Express App running at http://127.0.0.1:5000/")// // });
