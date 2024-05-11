@@ -27,7 +27,6 @@ export async function OtpCode(email) {
 			query = getUserQuery(email.toUpperCase());
 			user = await sqlQueryExecute(query);
 			otpCode = await generateOtpCode();
-
 			query = insertUserOtpQuery(user.id, otpCode);
 			await sqlQueryExecute(query);
 		} else if (isUserOptExpired(user.id)) {
