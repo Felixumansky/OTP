@@ -17,6 +17,7 @@ export const config = {
  * returns data from table
  */
 export async function sqlQueryExecute(query) {
+	console.log("Sql query: ", query);
 	return new Promise((resolve, reject) => {
 		sql.connect(config, async (err) => {
 			if (err) {

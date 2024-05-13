@@ -23,7 +23,9 @@ export function addMinutes(date, minutes) {
 
 export function formatToSqlDate(date) {
 	return (
-		new Date().toLocaleDateString() + " " + new Date().toLocaleTimeString()
+		new Date().toLocaleDateString("en-US") +
+		" " +
+		new Date().toLocaleTimeString()
 	);
 }
 

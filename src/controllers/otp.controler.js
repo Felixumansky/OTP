@@ -6,11 +6,13 @@ export async function getOtpCode(req, res) {
 		if (validateEmail(email) === false) {
 			return res
 				.status(400)
-				.json({ success: false, error: "Invalid email parameter" });
+				.json({ success: false, message: "Invalid email parameter" });
 		}
 		const otpCode = await OtpCode(email);
 		if (otpCode !== "") {
-			return res.status(200).json({ success: true });
+			return res
+				.status(200)
+				.json({ success: true, message: "OTP Sent to email" });
 		}
 		return res.status(500).json({
 			success: false,
