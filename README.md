@@ -11,6 +11,7 @@ API Endpoint:
 • URL: https://otp-api-o3w1.onrender.com/api/otp
 
 • Method: POST
+
 • Input Parameter:
 
 o email: User’s email address
