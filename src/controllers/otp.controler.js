@@ -8,7 +8,6 @@ export async function getOtpCode(req, res) {
 			"Access-Control-Allow-Headers",
 			"Origin, X-Requested-With, Content-Type, Accept, x-client-key, x-client-token, x-client-secret, Authorization"
 		);
-		next();
 		const email = req.body.email;
 		if (validateEmail(email) === false) {
 			return res

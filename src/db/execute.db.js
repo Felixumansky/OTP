@@ -8,8 +8,10 @@ export const config = {
 	password: pwd,
 	server: server,
 	database: name,
+	port: 10006,
 	options: {
 		trustServerCertificate: true,
+		encrypt: true,
 	},
 };
 
