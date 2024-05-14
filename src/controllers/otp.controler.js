@@ -2,6 +2,13 @@ import { OtpCode } from "../services/opt.services/otp.service.js";
 import { validateEmail } from "../utils/utils.js";
 export async function getOtpCode(req, res) {
 	try {
+		res.header("Access-Control-Allow-Origin", "*");
+		res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
+		res.header(
+			"Access-Control-Allow-Headers",
+			"Origin, X-Requested-With, Content-Type, Accept, x-client-key, x-client-token, x-client-secret, Authorization"
+		);
+		next();
 		const email = req.body.email;
 		if (validateEmail(email) === false) {
 			return res
